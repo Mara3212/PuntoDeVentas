@@ -1,0 +1,79 @@
+﻿<Window x:Class="PuntoDeVentas.Views.MiCuenta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PuntoDeVentas.Views"
+        mc:Ignorable="d"
+        Title="MiCuenta" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Cursor="Hand"
+        FontSize="15"
+        Background="Transparent"
+        MouseDown="Cerrar"
+        Height="300"
+        Width="450">
+    <Border CornerRadius="10"
+            Background="White"
+            BorderThickness="5"
+            Opacity=".95">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="4"
+                       Text="Mi Cuenta"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="40"
+                       FontWeight="ExtraBold"/>
+            <Image Grid.Column="3"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   Height="60"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Source="/SCS/IMG/LogoZorro.png"/>
+            <StackPanel Grid.Row="2"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Grid.RowSpan="3"
+                        HorizontalAlignment="Left"
+                        Background="Transparent">
+                <TextBlock FontSize="15"
+                           x:Name="lblNombre"
+                           Text="Nombres"/>
+                <TextBlock FontSize="15"
+                           x:Name="lblApellidos"
+                           Text="Apellidos"/>
+                <TextBlock FontSize="15"
+                           x:Name="lblCorreo"
+                           Text="Correo"/>
+                <TextBlock FontSize="15"
+                           x:Name="lblPrivilegio"
+                           Text="Privilegio:  nivel"/>
+            </StackPanel>
+            <Image Grid.Row="2"
+                   Grid.Column="3"
+                   x:Name="imagen"
+                   Grid.RowSpan="2"/>
+        </Grid>
+    </Border>
+</Window>
